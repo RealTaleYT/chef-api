@@ -14,15 +14,23 @@ git clone https://github.com/tu-usuario/tu-repo.git
 cd tu-repo
 ```
 Instala las dependencias:
+```bash
 composer install
+```
 Configura la base de datos en .env.local:
+```bash
 DATABASE_URL="mysql://usuario:contraseña@127.0.0.1:3306/tu_base_de_datos"
+```
 Crea la base de datos y ejecuta las migraciones:
+```bash
 php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
+```
 ##  ⚠️ Las migraciones están ignoradas en Git, deberás generarlas localmente si es necesario.
 Inicia el servidor de desarrollo:
+```bash
 symfony server:start
+```
 ## 📡 Endpoints disponibles
 GET /recipes — Listar recetas (con filtros opcionales).
 POST /recipes — Crear nueva receta.
